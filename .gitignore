@@ -1,3 +1,5 @@
+*.parquet
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[codz]
@@ -64,6 +66,8 @@ db.sqlite3-journal
 # Flask stuff:
 instance/
 .webassets-cache
+
+
 
 # Scrapy stuff:
 .scrapy
