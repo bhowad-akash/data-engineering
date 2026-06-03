@@ -1,8 +1,7 @@
 import sys
 import pandas as pd
-print('Hello-World!')
-
-print("arguments", sys.argv)
+print('Hello from pipeline.py!')
+print("arguments passed to pipeline.py:", sys.argv)
 
 day = int(sys.argv[1])
 print(f"Running pipeline for day {day}")
