@@ -1,11 +1,18 @@
 import sys
 import pandas as pd
 
-df = pd.DataFrame({'month': [1, 2, 3], 'value': [10, 20, 30]})
+print("hello Akash")
+month = sys.argv[1]
+print(f"Running pipeline for the month of {month}")
+
+df = pd.DataFrame({
+    "Name": ["Alice", "Bob", "Charlie"],
+    "Age": [25, 30, 35],
+    "City": ["New York", "Los Angeles", "Chicago"]
+})
+
+print("DataFrame created:")
 print(df)
 
-print("arguments:", sys.argv)
-month = int(sys.argv[1])
-print("Hey folks!", f"Running pipeline for month {month}")
-
-df.to_parquet(f"output_day_{sys.argv[1]}.parquet")
+df.to_parquet(f"data_{month}.parquet", engine='pyarrow', index=False)
+print(f"DataFrame saved to data_{month}.parquet")
